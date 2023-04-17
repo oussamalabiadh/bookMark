@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <meta name="description" content="CRUD System" />
+      <meta name="keywords" content="crud , bookmark " />
+      <meta name="author" content="OUSSAMA LABIADH" />
+
+      <!-- FontAwesome6.2 Css File  -->
+      <link rel="stylesheet" href="./css/all.min.css" />
+      <!-- BootStrap 5.3 Css File  -->
+      <link rel="stylesheet" href="./css/bootstrap.min.css" />
+      <!-- Custome Css File -->
+      <link rel="stylesheet" href="./css/style.css" />
+   </head>
+
+   <body>
+      <!-- svg Background  -->
+      <svg
+         version="1.1"
+         xmlns="http://www.w3.org/2000/svg"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         x="0px"
+         y="0px"
+         width="100%"
+         height="100%"
+         viewBox="0 0 1600 900"
+         preserveAspectRatio="xMidYMax slice"
+      >
+         <defs>
+            <linearGradient id="bg">
+               <stop offset="0%" style="stop-color: rgba(130, 158, 249, 0.06)"></stop>
+               <stop offset="50%" style="stop-color: rgba(76, 190, 255, 0.6)"></stop>
+               <stop offset="100%" style="stop-color: rgba(115, 209, 72, 0.2)"></stop>
+            </linearGradient>
+            <path
+               id="wave"
+               fill="url(#bg)"
+               d="M-363.852,502.589c0,0,236.988-41.997,505.475,0
+	s371.981,38.998,575.971,0s293.985-39.278,505.474,5.859s493.475,48.368,716.963-4.995v560.106H-363.852V502.589z"
+            />
+         </defs>
+         <g>
+            <use xlink:href="#wave" opacity=".3">
+               <animateTransform
+                  attributeName="transform"
+                  attributeType="XML"
+                  type="translate"
+                  dur="10s"
+                  calcMode="spline"
+                  values="270 230; -334 180; 270 230"
+                  keyTimes="0; .5; 1"
+                  keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+                  repeatCount="indefinite"
+               />
+            </use>
+            <use xlink:href="#wave" opacity=".6">
+               <animateTransform
+                  attributeName="transform"
+                  attributeType="XML"
+                  type="translate"
+                  dur="8s"
+                  calcMode="spline"
+                  values="-270 230;243 220;-270 230"
+                  keyTimes="0; .6; 1"
+                  keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+                  repeatCount="indefinite"
+               />
+            </use>
+            <use xlink:href="#wave" opacty=".9">
+               <animateTransform
+                  attributeName="transform"
+                  attributeType="XML"
+                  type="translate"
+                  dur="6s"
+                  calcMode="spline"
+                  values="0 230;-140 200;0 230"
+                  keyTimes="0; .4; 1"
+                  keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+                  repeatCount="indefinite"
+               />
+            </use>
+         </g>
+      </svg>
+
+      <main class="container">
+         <!-- book area  -->
+         <header class="pt-3 book-inputs">
+            <!-- main title  -->
+            <h1 class="text-center fw-bold text-white">Bookmarker App</h1>
+
+            <section class="book-custom rounded-3 p-4 vstack gap-4">
+               <div>
+                  <label for="siteName" class="form-label">Site Name:</label>
+                  <input type="text" class="form-control" id="siteName" placeholder="BookMark Name..." />
+                  <p class="alert alert-danger d-none" id="alertName">Name Is Required</p>
+               </div>
+
+               <div>
+                  <label for="siteUrl" class="form-label">Site URL:</label>
+                  <input type="url" class="form-control" id="siteUrl" placeholder="Website URL..." />
+                  <p class="alert alert-danger d-none" id="alertUrl">Url Is Required</p>
+                  <p class="alert alert-danger d-none" id="alertExite">Url Is Exite</p>
+               </div>
+
+               <button class="btn btn-primary mt-4" id="btnAdd">Add Bookmark</button>
+               <button class="btn btn-warning mt-4 d-none" id="btnUpdate">Update Bookmark</button>
+            </section>
+         </header>
+
+         <!-- section data  -->
+         <section class="book-data">
+            <input type="search" class="form-control form-control-sm w-50 mx-auto my-3" placeholder="Search..." id="searchBook" />
+
+            <div class="table-responsive book-custom p-3">
+               <table class="table table-sm mb-0 text-nowrap table-info text-center">
+                  <thead>
+                     <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">URL</th>
+                        <th scope="col">Action</th>
+                     </tr>
+                  </thead>
+                  <tbody id="tableBody"></tbody>
+               </table>
+            </div>
+         </section>
+      </main>
+
+      <script src="./js/bootstrap.bundle.min.js"></script>
+      <script src="./js/main.js"></script>
+   </body>
+</html>

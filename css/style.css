@@ -1,0 +1,61 @@
+/* ----------------- Start Global ----------------- */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;900;1000&display=swap");
+
+html,
+body {
+   height: 100%;
+}
+body {
+   font-family: "Nunito", sans-serif;
+   position: relative;
+   z-index: 1;
+}
+
+::-webkit-scrollbar {
+   width: 10px;
+   height: 10px;
+}
+
+::-webkit-scrollbar-track {
+   background-color: #0e4166;
+   box-shadow: 0 0 2px inset #00000079;
+}
+
+::-webkit-scrollbar-thumb {
+   background-color: rgb(67, 123, 226);
+   box-shadow: 0 0 10px 10px rgb(67, 123, 226) ;
+}
+
+svg {
+   position: fixed;
+   z-index: -1;
+   top: 0;
+   left: 0;
+   width: 100%;
+   min-height: 100vh;
+   display: block;
+   background-color: #0e4166;
+   background-image: linear-gradient(to bottom, rgba(14, 65, 102, 0.86), #0e4166);
+}
+.book-custom {
+   background-color: rgba(0 0 0 / 0.2);
+   color: #fff;
+   backdrop-filter: blur(3px);
+}
+
+.form-control:focus {
+   box-shadow: 0 0 0 4px #3f9ec39a;
+   caret-color: #2f6f88;
+}
+
+.btn-primary {
+   --bs-btn-bg: #3f9ec39a;
+   --bs-btn-border-color: rgba(26, 82, 104, 0.836);
+   --bs-btn-hover-bg: #3f9ec3b6;
+}
+
+.table-responsive {
+   max-height: 30vh;
+   overflow: auto !important;
+}
+
